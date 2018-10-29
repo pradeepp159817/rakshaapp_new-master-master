@@ -177,15 +177,11 @@ public class TypeActivity extends AppCompatActivity {
         if (checknew) {
 
             MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(TypeActivity.this, "" + Math.random());
-
             sequence.setConfig(config);
-
             sequence.addSequenceItem(imbutton,
                     "If you are a raksha band user click here ", "GOT IT");
-
             sequence.addSequenceItem(imbutton1,
                     "If you want to be a caretaker click here ", "GOT IT");
-
             sequence.start();
         }
 
@@ -239,7 +235,8 @@ public class TypeActivity extends AppCompatActivity {
                 Toast.makeText(TypeActivity.this, "saving data", Toast.LENGTH_SHORT).show();
                 coordinatorLayout.setCurrentPage(2, true);
                 post posts = new post();
-                posts.execute();
+                posts.execute();// this function starts a async task and executes posting of wearer info
+                //to server.
 
                 //public void onClick(View v) {}
 
@@ -450,6 +447,7 @@ public class TypeActivity extends AppCompatActivity {
         }
         return false;
     }
+    //asynctask
     public class post extends AsyncTask<String, String, String>{
 
         @Override
@@ -470,6 +468,7 @@ public class TypeActivity extends AppCompatActivity {
     public void sendPost(String username, String password,String bgrp ) {
         mAPIService.savePost(username, password, 1,bgrp).enqueue(new Callback<Post>() {
         });
+        // here callback func which is overrride ,so it ensures that post is successfull or not
 
     }
 

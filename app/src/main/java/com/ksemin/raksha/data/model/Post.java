@@ -1,4 +1,6 @@
 package com.ksemin.raksha.data.model;
+//this class file is used to ready the format the of the info entered by user to post ot
+// kshemin server.
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

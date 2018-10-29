@@ -27,16 +27,16 @@ public class firebase_receiver extends FirebaseMessagingService {
             String s = remoteMessage.getData().get("score");
             Log.d(TAG, "Message data payload:"+s );
             PugNotification.with(this)
-               .load()
-                .title("Raksha")
-               .message(s)
+                    .load()
+                    .title("Raksha")
+                    .message(s)
                     .bigTextStyle(" Raksha")
-                .ongoing(false)
-                .smallIcon(R.mipmap.applogo)
-                .largeIcon(R.mipmap.applogo)
-                .flags(Notification.DEFAULT_ALL)
-               .simple()
-                .build();
+                    .ongoing(false)
+                    .smallIcon(R.mipmap.applogo)
+                    .largeIcon(R.mipmap.applogo)
+                    .flags(Notification.DEFAULT_ALL)
+                    .simple()
+                    .build();
 
             if (/* Check if data needs to be processed by long running job */ true) {
                 // For long-running tasks (10 seconds or more) use Firebase Job Dispatcher.
@@ -45,10 +45,8 @@ public class firebase_receiver extends FirebaseMessagingService {
                 // Handle message within 10 seconds
                 ////handleNow();
             }
-
-        }
-
-        // Check if message contains a notification payload.
+            }
+            // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
         }

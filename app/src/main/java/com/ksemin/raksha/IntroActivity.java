@@ -1,21 +1,15 @@
 package com.ksemin.raksha;
 
-import android.app.Notification;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
-
 import com.cuneytayyildiz.onboarder.OnboarderActivity;
 import com.cuneytayyildiz.onboarder.OnboarderPage;
 import com.cuneytayyildiz.onboarder.utils.OnboarderPageChangeListener;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.iid.FirebaseInstanceId;
-
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.goncalves.pugnotification.notification.PugNotification;
+
 
 
 public class IntroActivity extends OnboarderActivity implements OnboarderPageChangeListener {
@@ -42,8 +36,8 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
                 new OnboarderPage.Builder()
                         .title("why")
                         .description("we always would want to know that our loved ones are safe and sound wherever we are")
-                     .imageResourceId( 0)
-                       .backgroundColor(R.color.intro)
+                        .imageResourceId( 0)
+                        .backgroundColor(R.color.intro)
                         .titleColor(R.color.white)
                         .descriptionColor(R.color.white)
                         .multilineDescriptionCentered(true)
@@ -56,18 +50,18 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
                         .imageResourceId(0)
                         .backgroundColor(R.color.intro)
                         .titleColor(R.color.white)
-                       .descriptionColor(R.color.white)
+                        .descriptionColor(R.color.white)
                         .multilineDescriptionCentered(true)
                         .build(),
                 new OnboarderPage.Builder()
-                  .title("what")
-                .description("the rakha applicaiton monitors the saftey of your dear ones by ")
-                .imageResourceId(0)
-                .backgroundColor(R.color.intro)
-                .titleColor(R.color.white)
-                .descriptionColor(R.color.white)
-                .multilineDescriptionCentered(true)
-                .build()
+                        .title("what")
+                        .description("the rakha applicaiton monitors the saftey of your dear ones by ")
+                        .imageResourceId(0)
+                        .backgroundColor(R.color.intro)
+                        .titleColor(R.color.white)
+                        .descriptionColor(R.color.white)
+                        .multilineDescriptionCentered(true)
+                        .build()
         );
         setOnboarderPageChangeListener(this);
         initOnboardingPages(pages);
@@ -94,6 +88,5 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
 
     @Override
     public void onPageChanged(int position) {
-
-    }
+        }
 }

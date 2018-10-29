@@ -18,23 +18,23 @@ public class Callback<T> implements retrofit2.Callback<retrofit2.http.POST> {
     @Override
     public void onResponse(Call<POST> Call, Response<POST> response) {
         if(response.isSuccessful()) {
-               showResponse(response.body().toString());
+            showResponse(response.body().toString());
             Log.i("error", "post submitted to API." + response.body().toString());
             }
     }
 
     @Override
     public void onFailure(Call<POST> call, Throwable t) {
-
-             Log.e("MAINACTIVITY", "Unable to submit post to API.");
+        Log.e("MAINACTIVITY", "Unable to submit post to API.");
             }
 
 
 
 
-    public void showResponse(String response) {
+
+            public void showResponse(String response) {
         if(mResponseTv.getVisibility() == View.GONE) {
             mResponseTv.setVisibility(View.VISIBLE);
         }
-        mResponseTv.setText(response);
+            mResponseTv.setText(response);
     }}

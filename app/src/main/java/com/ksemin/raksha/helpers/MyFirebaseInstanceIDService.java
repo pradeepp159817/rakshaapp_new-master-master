@@ -7,12 +7,7 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
 
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
-
-
     public static final String TAG = "Firebaae";
-
-
-
     @Override
     public void onTokenRefresh() {
         // Get updated InstanceID token.
