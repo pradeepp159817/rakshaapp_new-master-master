@@ -34,6 +34,23 @@
             android:text="Emergency"
             android:textColor="@color/white"
             android:textSize="16.5dp" />
+        <Button
+            android:id="@+id/secondemerg"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="73dp"
+            android:visibility="invisible"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/roundshapebtn"
+
+            android:fontFamily="@font/sasu"
+            android:text="call"
+            android:textColor="@color/white"
+            android:textSize="16.5dp" />
 
 
     </RelativeLayout>

@@ -17,7 +17,7 @@ public class Informations extends RealmObject {
                 ", gender=" + gender +
                 '}';
     }
-
+// below functions are called from typeactvity
     public  String getName() {
         return name;
     }

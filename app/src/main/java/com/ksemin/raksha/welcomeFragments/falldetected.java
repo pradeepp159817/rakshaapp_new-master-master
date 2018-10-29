@@ -21,9 +21,6 @@ public class falldetected extends AppCompatActivity {
         setContentView(R.layout.activity_falldetected);
         mtextField=(TextView)findViewById(R.id.textView4);
         imv=(ImageView)findViewById(R.id.imageV);
-
-
-
         imv.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                /* Intent intent = new Intent(falldetected.this, MainActivity.class);
@@ -32,17 +29,12 @@ public class falldetected extends AppCompatActivity {
                 startActivity(intent);*/
                count ="true";
                finish();
-
             }
         });
-
-
-            CountDownTimer countDownTimer = new CountDownTimer(15000, 1000) {
-
-                public void onTick(long millisUntilFinished) {
+        CountDownTimer countDownTimer = new CountDownTimer(15000, 1000) {
+            public void onTick(long millisUntilFinished) {
                     mtextField.setText("sending message in  : " + millisUntilFinished / 1000);
                 }
-
                 public void onFinish() {
                     if (count.equals("false")) {
                         mtextField.setText("done!");
@@ -52,19 +44,9 @@ public class falldetected extends AppCompatActivity {
                     }
                 }
             }.start();
-
-
-
-
-
-    }
-
-
-
-    private void sendSMS(String phoneNumber, String message) {
-        SmsManager sms = SmsManager.getDefault();
-        sms.sendTextMessage(phoneNumber, null, message, null, null);
-
-    }
-
+            }
+            private void sendSMS(String phoneNumber, String message) {
+                SmsManager sms = SmsManager.getDefault();
+                sms.sendTextMessage(phoneNumber, null, message, null, null);
+                }
 }

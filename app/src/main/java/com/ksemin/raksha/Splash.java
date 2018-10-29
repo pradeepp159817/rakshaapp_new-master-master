@@ -16,8 +16,8 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-         isfirstrun = getSharedPreferences("preferences",MODE_PRIVATE).getBoolean("isfirstrun",true);
-         if (isfirstrun){
+        isfirstrun = getSharedPreferences("preferences",MODE_PRIVATE).getBoolean("isfirstrun",true);
+        if (isfirstrun){
              time=3500;
              getSharedPreferences("preferences",MODE_PRIVATE).edit().putBoolean("isfirstrun",false).commit();
              final Handler handler = new Handler();
@@ -30,8 +30,8 @@ public class Splash extends AppCompatActivity {
                      startActivity(intent);
                  }
              }, time);
-         }
-         else{
+             }
+             else{
 
              time = 1500;
              final Handler handler = new Handler();
